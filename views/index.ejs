@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <link rel="icon" href="stylesheets/favicon-32x32.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+        
+    </head>
+    <body>
+        <div class="info">
+            <div>
+                <a href="/gmail"><i class="fab fa-google-plus-g" style="text-decoration: none;color: white;"></i></a>
+                <a href="/facebook"><i class="fab fa-facebook" style="text-decoration: none;color: white;"></i></a>
+                <a href="/twitter"><i class="fab fa-twitter" style="text-decoration: none; color:  white"></i></a>
+                <a href="/github"><i class="fab fa-github" style="text-decoration: none; color: white"></i></a>
+            </div>
+            <text style="position: relative;right: 2%; color: white;">
+                <a href="/home/profile/<%= currentUser.id %>" style="text-decoration: none;color: white;">My Profile</a>
+              <% if(currentUser){ %>
+                <a href="/home" style="text-decoration: none;color: white;">Signed in as <%= currentUser.firstname %></a>
+                <% } %>
+                <a href="/logout" style="text-decoration: none;color:white;">Log Out</a>
+              
+              </text>
+        </div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="/stylesheets/android-chrome-192x192.png">
+                <div style="position: relative;left: 10%;top: 30%;color: red;font-size: 40px;font-weight: 700;">RDBMS</div>
+            </div>
+            <ul class="items">
+                <li>
+                    <a href="/home">Home</a>
+                </li>
+                <li>
+                    <a href="/home/add/<%= currentUser.id %>">Appointment</a>
+                </li>
+                <li>
+                    <a href="/home/view/<%= currentUser.id %>">Booked</a>
+                </li>
+                <li>
+                    <a href="/home/consultant">Consultant</a>
+                </li>
+                <li>
+                    <a href="/home/covid">Covid-19</a>
+                </li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="stylesheets/hospital.jpg">
+        </div>
+        <div class="elements">
+            <div class="updates">Information<hr id='hr1'></div>
+            <div class="events">Classes & Events<hr id="hr2"></div>
+        </div>
+        <div class="details">
+            <div class="information">
+                <text class="text1">A Hospital is a place where the sick and the injured are taken for treatment. The Doctors and nurses are readily available there for attending their patients.
+                    They are employed by the Hospitals to nurse the sick back to heath.In the nineteenth and the twentieth century’s medical science made progress and the cures for almost all the diseases were found.
+                    Both in the spheres of medicine and surgery the prolonged researches were rewarded with epoch-making achievements.
+                    The Dedicated teams of Doctors and nurses delivers the message of hope to their patients in the Hospitals. 
+                    All over the world, Hospitals are built to treat and and cure thousands of the sick patients. As these hospitals, there are very well-equipped well.
+                    facilities and expert Doctors.These Hospitals are considered the best places for effective treatment.
+                    facilities and expert Doctors. These Hospitals are considered the best places for effective treatment.The Doctors and Nurses works effortlessly in doing their duties to the patients. 
+                    The atmosphere in the Hospitals should be pleasant so the the patient can feel comfortable.However, some Hospital doesn’t provide the expected service to it’s patients. 
+                    They neglect their duties toward the patients. This should not happen. 
+                    The Doctors should always treats their patients with utmost care, considering their lives very precious.
+                </text>
+                <br>
+                <text class="text2" style="display: none;flex-direction: column;">
+                    <strong>Natural and Health Sciences 2020 :</strong>
+                    We believe that the participants who will take part in our international quality conference will contribute their scientific and vocational 
+                    studies by sharing their knowledge and experience in Natural, Engineering, Health, Sports, Agriculture, Forest and Aquaculture fields.
+                    <hr>
+                    <strong style="position: relative;top: 10px;">iNursing 2020 :</strong>
+                    The Webinar on Nursing (iNursing-2020) is the only 100% inclusive, 100% virtual event designed for the international nursing community to sharing the latest techniques,
+                    best practices and to grow your network.
+                    <hr>
+                    <strong style="position: relative; top: 10px;">European Society of Abdominal Radiology 2020 :</strong>
+                    The European Society of Gastrointestinal and Abdominal Radiology (ESGAR) is a not-for-profit, educational and scientific organisation founded by radiologists working in 
+                    close association with gastroenterologists, hepatologists, abdominal surgeons, pathologists, and other allied specialists.
+                </text>
+            </div>
+        </div>
+        <div class="video">
+            <h1 style="position: relative; left: 40%;top: 30px">Healtcare Explained</h1>
+            <iframe src="/stylesheets/healthcare.mp4" height="500px" width="1100px"  frameborder='0' style="position: relative; left: 17%;top: 50px;">
+
+            </iframe>
+        </div>
+        <div class="number1">
+            <div class="box1">
+                <p style="font-size: 70px;text-align: center;position: relative;top: 10px;font-weight: 400;">
+                    The <span><img src="/stylesheets/hashtag1.png" style="position: relative;width: 20%;height: 15%;left: 0%;"></span><br>Hospital
+                    <p style="position: relative;top: 10%;font-size: 20px;text-align: center;">RDBMS Clinic is the No.1 <br>hospital overall</p>
+                    <hr style="position: relative;top: 30%; width: 90%;left: 5%;color: antiquewhite;opacity: 0.5;">
+                    <a href ="/home" style="position: relative;top: 32%;font-size: 20px;left: 10%;text-decoration: none;">More about our #1 Ranking</a>
+                </p>
+            </div>
+            <div class="box1">
+                <img src="/stylesheets/doctors.jpg" style="width: 100%;position: relative;left: 0%;margin: 0;padding: 0;">
+                <p style="position: relative;text-align: center;font-size: 25px;top: 5%;">The Trusted Doctor's <br> in HealthCare</p>
+                <hr style="position: relative;top: 12%; width: 90%;left: 5%;color: antiquewhite;opacity: 0.5;">
+                <a href ="/home" style="position: relative;top: 12%;font-size: 20px;left: 3%;text-decoration: none;">International Services At RDBMS Clinic</a>
+            </div>
+            <div class="box1">
+                <img src="stylesheets/drip.jpg" style="position: relative;left: 0%;margin: 0;padding: 0;width: 100%;">
+                <p style="position: relative; text-align: center;font-size: 25px;top: 5%;">Challenge doubles your gift <br> to advance COVID research</p>
+                <hr style="position: relative;top: 12%; width: 90%;left: 5%;color: antiquewhite;opacity: 0.5;">
+                <a href="/home" style="position: relative;text-decoration: none;top: 15%;font-size: 25px;left: 30%;">Give Now</a>
+            </div>
+            <div class="box1">
+                <img src="/stylesheets/know.png" style="position: relative;width: 100%;margin: 0;padding: 0;left: 0%;">
+                <p style="position: relative;font-size: 25px;left: 5%;">When it's time to find answers...</p>
+                <hr style="position: relative;top: 12%; width: 90%;left: 5%;color: antiquewhite;opacity: 0.5;">
+                <a href="/home" style="position: relative;top: 15%;font-size: 20px;text-decoration: none;left: 15%;">You know where to Go</a>
+            </div>
+        </div>
+        <div class="choose">
+            <div class="head">
+                <p>Why Choose RDBMS Clinic ? </p>
+                <hr>
+            </div>
+            <div class="inform">
+                <div class="exp">
+                    <i class="fas fa-stethoscope fa-2x"></i>
+                    <strong>More Experience</strong>
+                    <p>Every year, more than a million people come to Mayo Clinic for care. Our highly specialized experts are deeply experienced
+                        in treating rare and complex conditions.</p>
+                </div>
+                <div class="exp">
+                    <i class="fas fa-check-circle fa-2x"></i>
+                    <strong>The right answers</strong>
+                    <p>
+                        Getting effective treatment depends on identifying the right problem. In a recent study, 88 percent of patients who 
+                        came to Mayo Clinic for a second opinion received a new or refined diagnosis.
+                    </p>
+                </div>
+                <div class="exp">
+                    <i class="fas fa-redo-alt fa-2x"></i>
+                    <strong>Seamless Care</strong>
+                    <p>At Mayo Clinic, every aspect of your care is coordinated and teams of experts work together to provide 
+                        exactly the care you need. What might take months elsewhere can often be done in days here.
+                    </p>
+                </div>
+                <div class="exp">
+                    <i class="fas fa-star-of-life fa-2x"></i>
+                    <strong>Unparalled Expertise</strong>
+                    <p>Mayo Clinic experts are some of the best in the world. In the U.S. News & World Report rankings of top hospitals,
+                        Mayo Clinic is consistently ranked among the top hospitals in the nation.
+                    </p>
+                </div>
+            </div>
+            <div class="chosbtn">
+                <button>Choose RDBMS Clinic for HealthCare</button>
+            </div>
+
+        </div>
+        <div class="important">
+            <div class="col1">
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">For Medical Professionals</strong>
+                    <p>Find a doctor</p>
+                    <p>Refer a patient</p>
+                    <p>View clincial trials</p>
+                </div>
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">For Students</strong>
+                    <p>View degree programs</p>
+                    <p>View admissions requirements</p>
+                    <p>Log in to the student portal</p>
+                </div>
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">For RDBMS Clinic Faculty And Staff</strong>
+                    <p>Find a doctor</p>
+                    <p>Find other carrer opportunities</p>
+                </div>
+                <div>
+                    <strong style="padding: 5px; font-weight: 400;">For the Media</strong>
+                    <p>Media requests</p>
+                </div>
+            </div>
+            <div class="col2">
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">For Researchers</strong>
+                    <p>Charitable Care & Financial Assistance</p>
+                    <p>View RDBMS Clinic's lab services</p>
+                </div>
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">For Job Seekers</strong>
+                    <p>View open positions</p>
+                    <p>Working at Mayo Clinic</p>
+                </div>
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">For International Patients</strong>
+                    <p>Request an appointment</p>
+                    <p>Financial services</p>
+                    <P>International offices</P>
+                </div>
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">Charitable Care & Financial Assistance</strong>
+                    <p>Arizona financial assistance documents</p>
+                    <p>Florida financial assistance documents</p>
+                    <p>Minnesota financial assistance documents</p>
+                    <p>Community Health Needs Assessment (CHNA)</p>
+                </div>
+            </div>
+            <div class="col3">
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">Free E-Newsletter</strong>
+                    <p>Get our free e-newsletter to stay up to date on the latest <br> health information from experts at RDBMS Clinic.</p>
+
+                </div>
+                <div>
+                    <strong style="padding: 5px;font-weight: 400;">Your Gift Holds Great Power</strong>
+                    <p>Make your tax-deductible gift today, and be a part of cutting-edge <br>
+                        research and care that's changing medicine as it's known today.</p>
+                </div>
+                <button class="donate">Make a Donation</button>
+            </div>
+        </div>
+        <div class="bottom">
+
+        </div>
+
+        <script src="/javascript/app.js"></script>
+    </body>
+</html>

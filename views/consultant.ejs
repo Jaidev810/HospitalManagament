@@ -1,0 +1,39 @@
+<%- include("./partials/header.ejs") %>
+<link  rel="stylesheet" href="/stylesheets/consultant.css">
+
+
+<div class="quotes">
+  <% doctor.forEach(function(doctor){%>
+  <div class="card">
+    <div class="box box1" style="margin-top: 30px;">
+      <p id="doctor"><strong><i><%= doctor.name %></i></strong> </p>
+      <table class="ui definition table" style="margin-top: 40px;">
+        <tbody>
+          <tr>
+            <td class="two wide column">Qualification</td>
+            <td><%= doctor.qualification %></td>
+          </tr>
+          <tr>
+            <td>Experience</td>
+            <td><%= doctor.experience %> years</td>
+          </tr>
+          <tr>
+            <td>Speciality</td>
+            <td><%= doctor.speciality %></td>
+          </tr>
+          <tr>
+            <td>Working Days</td>
+            <td><i class="clock outline icon"></i><%= doctor.working_hrs%></td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+    <div class="bg"></div>
+  </div>
+  <% }) %>
+</div>
+
+
+
+<%- include("./partials/footer.ejs") %>

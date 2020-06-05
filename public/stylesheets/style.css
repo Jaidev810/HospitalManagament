@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: 1s fadein 0.5s forwards;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25px;
+    background-color: #3f3f44;
+}
+
+.info a{
+    padding: 5px;
+}
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-basis: 50%;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40%;
+}
+
+img{
+    position: relative;
+    left: 10%;
+}
+
+.items li{
+    position: relative;
+    text-decoration: none;
+    top: 30%;
+    padding: 10px;
+    opacity: 0.6;
+}
+
+.items li a{
+    text-decoration: none;
+    color: red;
+    font-size: 18px;
+}
+
+/* Image Div*/
+.image {
+    width: 100%;
+}
+
+.image img {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: 450px;
+}
+
+/* Elements */
+
+.elements{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.updates{
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    align-items: center;
+    color:  #08CE7D;
+}
+
+.updates hr{
+    position: relative;
+    top: 5px;
+    width: 20%;
+    border: 2px solid #08CE7D;
+}
+
+.updates:hover{
+    cursor: pointer;
+}
+
+.events{
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-self: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #05A7C7;
+}
+
+.events hr{
+    position: relative;
+    top: 5px;
+    width: 25%;
+    border: 2px solid #05A7C7;
+    display: none;
+}
+
+.events:hover{
+    cursor:pointer;
+}
+
+
+/* Details */
+
+.details{
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+    height: 600px;
+}
+
+.information{
+    position: relative;
+    top: 7%;
+    left: 15%;
+    width: 70%;
+    background-color: white;
+    padding: 10px;
+    height: 85%;
+    box-shadow: 5px 5px yellow;
+    background: transparent;
+}
+
+.information text{
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: #4d3e3e;
+}
+
+.information:hover{
+    cursor: pointer;
+}
+
+/*number1*/
+
+.number1{
+    width: 100%;
+    height: 70vh;
+    background-color: #e1f2fb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.box1{
+    width: 20%;
+    height: 70%;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1); 
+    position: relative;
+    top: 12%;
+    background-color: white;
+}
+
+/* video */
+
+.video{
+    width: 100%;
+    height: 700px;
+}
+
+.choose{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.head p{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.head hr{
+    width: 7%;
+    position: relative;
+    left: 45%;
+    top: 50%;
+    color: blue;
+}
+
+
+.inform{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    position: relative;
+    top: 10%;
+}
+
+.inform .exp{
+    display: flex;
+    flex-direction: column;
+}
+
+.exp .fas{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.exp strong{
+    font-size: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.exp p{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.chosbtn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 30%;
+    padding: 10px;
+}
+
+.chosbtn button{
+    width: 20%;
+    padding: 5px;
+    border-radius: 23px;
+    border: none;
+    font-size: 17px;
+    color: white;
+    background-color: #035aa6;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+/*important*/
+.important{
+    width: 100%;
+    height: 95vh;
+    background-color: #211717;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.col2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.col3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.col1 p{
+    color: #dddddd;
+    padding: 5px;
+    font-size: 15px;
+    opacity: 0.75;
+}
+
+.col2 p{
+    color: #dddddd;
+    padding: 5px;
+    font-size: 15px;
+    opacity: 0.75;
+}
+.col3 p{
+    color: #dddddd;
+    padding: 5px;
+    font-size: 15px;
+    opacity: 0.75;
+}
+
+.col1 strong{
+    font-size: 20px;
+}
+
+.col2 strong{
+    font-size: 20px;
+}
+
+.col3 strong{
+    font-size: 20px;
+}
+
+.donate{
+    width: 40%;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background-color: silver;
+    cursor: pointer;
+}
+
+.bottom{
+    width: 100%;
+    height: 100px;
+    background-color: #f8f8f8;
+}
+
+
+
+
+@media screen and (max-width:1080px){
+    .information text{
+        font-size: 15px;
+    }
+}
+
+
+@keyframes fadein{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeout{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+/* Appointment page */
+.header{
+    position: relative;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+
+.appoint{
+    position: relative;
+    width: 100%;
+    top: 120px;
+    height: 650px;
+}
+
+.appoint_form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.first{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+.app_in{
+    width: 300px;
+    height: 35px;
+    font-size: 20px;
+    border: 1px solid #e4e4e4;
+    box-shadow: 5px 5px 5px rgb(226, 226, 226);
+}
+
+.second{
+    position: relative;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    top: 40px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.third{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.desc{
+    position: relative;
+    left: 27%;
+    width: 700px;
+    height: 100px;
+    top: 5px;
+    border: 1px solid #e4e4e4;
+    box-shadow:2px 2px 2px rgb(226, 226, 226);
+}
+
+
+.btn{
+    position: relative;
+    width: 150px;
+    left: 47%;
+    height: 40px;
+    top: 150px;
+    cursor: pointer;
+    border-radius: 7px;
+    background: linear-gradient(#5c2a9d,#5c2a9d);
+    border: none;
+    font-size: 15px;
+    color: white;
+}
+
+.btn:hover{
+    border: 1px solid #6a097d;
+    box-shadow: 2px 2px 2px #862a5c ;
+}
+
+
+.first .doctor{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.first .email{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.end{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(226, 226, 226);
+}
