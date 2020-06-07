@@ -156,7 +156,7 @@ app.get("/home", isloggedin, function(req, res){
 
 //consultant page
 app.get("/home/consultant", isloggedin,function(req, res){
-    var q = 'SELECT * FROM doctor GROUP BY name';
+    var q = 'SELECT * FROM doctor INNER JOIN qualification ON doctor.degree_id = qualification.id  GROUP BY doctor.name';
     connection.query(q, function(err, results){
         if(err) throw err;
         res.render("consultant", {doctor:results});
