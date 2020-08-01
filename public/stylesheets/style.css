@@ -142,7 +142,9 @@ img{
 
 .details{
     width: 100%;
-    background-color: rgb(226, 226, 226);
+    background: #ff9966;
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+    background: linear-gradient(to right, #ff5e62, #ff9966);
     height: 600px;
 }
 
@@ -173,7 +175,9 @@ img{
 .number1{
     width: 100%;
     height: 70vh;
-    background-color: #e1f2fb;
+    background: #30E8BF;
+    background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);
+    background: linear-gradient(to right, #FF8235, #30E8BF);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -357,11 +361,19 @@ img{
 }
 
 .bottom{
-    width: 100%;
-    height: 100px;
-    background-color: #f8f8f8;
+    height: 13vh;
+    background-color: white;
 }
 
+.bottom p{
+    padding: 10px;
+    font-size: 15px;
+}
+
+.contact{
+    text-align: end;
+    font-size: 12px;
+}
 
 
 
@@ -389,113 +401,3 @@ img{
 }
 
 
-/* Appointment page */
-.header{
-    position: relative;
-    top: 40px;
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
-}
-
-
-.appoint{
-    position: relative;
-    width: 100%;
-    top: 120px;
-    height: 650px;
-}
-
-.appoint_form{
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.first{
-    position: relative;
-    width: 100%;
-    display: flex;
-    height: 100px;
-    justify-content: space-evenly;
-}
-
-.app_in{
-    width: 300px;
-    height: 35px;
-    font-size: 20px;
-    border: 1px solid #e4e4e4;
-    box-shadow: 5px 5px 5px rgb(226, 226, 226);
-}
-
-.second{
-    position: relative;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    height: 70px;
-    top: 40px;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
-
-.third{
-    position: relative;
-    width: 100%;
-    height: 100px;
-    top: 60px;
-    display: flex;
-    flex-direction: column;
-}
-
-.desc{
-    position: relative;
-    left: 27%;
-    width: 700px;
-    height: 100px;
-    top: 5px;
-    border: 1px solid #e4e4e4;
-    box-shadow:2px 2px 2px rgb(226, 226, 226);
-}
-
-
-.btn{
-    position: relative;
-    width: 150px;
-    left: 47%;
-    height: 40px;
-    top: 150px;
-    cursor: pointer;
-    border-radius: 7px;
-    background: linear-gradient(#5c2a9d,#5c2a9d);
-    border: none;
-    font-size: 15px;
-    color: white;
-}
-
-.btn:hover{
-    border: 1px solid #6a097d;
-    box-shadow: 2px 2px 2px #862a5c ;
-}
-
-
-.first .doctor{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.first .email{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.end{
-    position: relative;
-    width: 100%;
-    height: 120px;
-    background-color: rgb(226, 226, 226);
-}

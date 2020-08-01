@@ -4,7 +4,7 @@ const hr1 = document.querySelector('#hr1');
 const hr2 = document.querySelector('#hr2');
 const text1 = document.querySelector('.text1');
 const text2 = document.querySelector('.text2');
-const iframe = document.querySelector('iframe');
+const video = document.querySelector('iframe');
 
 
 updates.addEventListener('click', () => {
@@ -23,4 +23,4 @@ function visibility(active, inactive){
     inactive.style.display = 'none';
 }
 
-
+video.setVolume = 0.0
