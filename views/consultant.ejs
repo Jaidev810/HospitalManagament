@@ -6,6 +6,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/stylesheets/consultant.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet"> 
         <link rel="shortcut icon" href="#">
     </head>
     <body>
@@ -53,9 +55,19 @@
         </div>
 
         <div class="doctor">
-            <% doctor.forEach((patient) =>{ %>
-                <h2> <%= patient.name %></h2>
-                <% }) %>
+            <% doctor.forEach((result) => { %>
+                <div class="personal">
+                    <p>Doctor's Name: <span><%= result.name %></span></p>
+                    <p>Specality: <span><%= result.speciality %></span></p>
+                    <p>Experience: <span><%= result.experience %></span></p>
+                    <p>Working Days: <span><%= result.working_hrs %></span></p>
+                </div>
+            <% }) %>
+        </div>
+
+        <div class="bottom">
+            <p>Jaidev Chaudhary <br> jaidevchaudhary810@gmail.com <br> 2020 @ copyrights.</p>
+            <p class="contact">For any problem Contact </p>
 
         </div>
     </body>
