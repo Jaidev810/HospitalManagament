@@ -21,6 +21,7 @@
     "method-override": "^3.0.0",
     "module-exports": "^1.0.0",
     "mysql": "^2.18.1",
+    "nodemailer": "^6.4.11",
     "particlesjs": "^2.2.3",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"

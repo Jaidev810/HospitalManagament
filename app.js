@@ -9,10 +9,9 @@ const express            = require("express"),
       LocalStrategy      = require("passport-local"),
       bcrypt             = require('bcrypt-nodejs'),
       flash              = require("connect-flash"),
-      bookingmail        = require('./utils/emails'),
-      cancellingmail     = require('./utils/canceling'),
       connection         = require('./config/database'),
       request            = require("request"),
+      nodemailer         = require("nodemailer"),
       methoOverride      = require("method-override");
 
 
@@ -110,6 +109,21 @@ passport.use(
 );
 
 connection.query("USE hospital1");
+// ============== NodeMailer Setup =================
+const transporter = nodemailer.createTransport({
+    host: process.env.HOST,
+    port: 587,
+    secure: true,
+    service: "gmail",
+    auth:{
+        type: 'OAuth2',
+        user: process.env.USER,
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        refreshToken: process.env.REFRESH_TOKEN,
+        accessToken: process.env.ACCESS_TOKEN
+    }
+})
 
 
 //=========== Routes ====================
@@ -184,28 +198,40 @@ app.post("/home/add/:id", isloggedin,  function(req, res){
         if(error) throw error;
         var patient = {doctor: req.body.doctor, email : req.body.email, created_at : req.body.date,
             description: req.body.description, user_id : req.user.id, doctor_id: results[0].doctor_id};
-        var email = req.body.email;
-        var date = req.body.date;
-        connection.query('INSERT INTO patient SET ?', patient, function(err, results){
-            // bookingmail(email, date);
-            res.redirect("/home");
-                });
-    })
-});
+
+        const mailOptions = {
+            from: 'jaidevchaudhary810@gmail.com',
+            to: req.body.email,
+            subject: 'Regarding Your Booking',
+            html: `Congrataulation!, Your booking has been 
+                    confirmed with ${req.body.doctor} on
+                    ${req.body.date}
+                    With Regards
+                    Hospital Management`
+        }
+
+        transporter.sendMail(mailOptions, function(error){
+            if (error){
+                console.log('Error in sending mail')
+                res.redirect('/home')
+            }else{
+                connection.query('INSERT INTO patient SET ?', patient, function(err, results){
+                    res.redirect("/home");
+                })
+            }
+        
+           });
+    });
+});    
 
 //delete report route
 app.delete('/home/view/:id', isloggedin, function(req, res){
-    // var q = 'SELECT email AS email FROM patient WHERE user_id = ' + req.params.id;
-    // connection.query(q, function(err, results){
-    //     // var mail = results[0].email;
-    //     // cancellingmail(mail);
         var q1 = 'DELETE FROM patient WHERE id = ' + req.params.id;
         connection.query(q1, function(err, results){
             if(err) throw err;
             res.redirect("/home");
         })
-    });
-// });
+});
 
 app.get("/home/view/:id", isloggedin, function(req, res){
     var q = 'SELECT * FROM users JOIN patient ON patient.user_id = users.id WHERE patient.user_id = '+ req.params.id;
