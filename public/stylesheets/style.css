@@ -82,8 +82,8 @@ img{
 .arrow{
     position: absolute;
     width: 50px;
-    height: 450px;
-    top: 165px;
+    height: 300px;
+    top: 230px;
     left: 1468px;
     background: rgba(0,0,0,0.3);
     border: none;
