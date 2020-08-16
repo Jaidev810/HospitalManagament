@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <link rel="icon" href="/stylesheets/images/favicon-32x32.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheets/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/view.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/add.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="/stylesheets/consultant.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="info">
+            <div>
+                <a href="/gmail"><i class="fab fa-google-plus-g" style="text-decoration: none;color: white;"></i></a>
+                <a href="/facebook"><i class="fab fa-facebook" style="text-decoration: none;color: white;"></i></a>
+                <a href="/twitter"><i class="fab fa-twitter" style="text-decoration: none; color:  white"></i></a>
+                <a href="/github"><i class="fab fa-github" style="text-decoration: none; color: white"></i></a>
+            </div>
+            <text style="position: relative;right: 2%; color: white;">
+                <a href="/home/profile/<%= currentUser.id %>" style="text-decoration: none;color: white;">My Profile</a>
+              <% if(currentUser){ %>
+                <a href="/home" style="text-decoration: none;color: white;">Signed in as <%= currentUser.firstname %></a>
+                <% } %>
+                <a href="/logout" style="text-decoration: none;color:white;">Log Out</a>
+              
+              </text>
+        </div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="/stylesheets/images/android-chrome-192x192.png">
+                <div style="position: relative;left: 10%;top: 30%;color: red;font-size: 40px;font-weight: 700;">RDBMS</div>
+            </div>
+            <ul class="items">
+                <li>
+                    <a href="/home">Home</a>
+                </li>
+                <li>
+                    <a href="/home/add/<%= currentUser.id %>">Appointment</a>
+                </li>
+                <li>
+                    <a href="/home/view/<%= currentUser.id %>">Booked</a>
+                </li>
+                <li>
+                    <a href="/home/consultant">Consultant</a>
+                </li>
+                <li>
+                    <a href="/home/covid">Covid-19</a>
+                </li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="/stylesheets/images/hospital.jpg">
+            <button class="arrow"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></button>
+        </div>
